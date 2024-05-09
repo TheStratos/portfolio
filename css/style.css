@@ -503,6 +503,7 @@ body {
 
 .about__inner-text {
     font-size: 1.1em;
+    line-height: 1.2;
     text-align: center;
     color: var(--accent-two);
     margin-bottom: 1em;
