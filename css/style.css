@@ -597,6 +597,7 @@ body {
     align-items: center;
     background: var(--black-light);
     position: relative;
+    
 }
 
 
@@ -610,7 +611,14 @@ body {
     border-radius: 50%;
     background: var(--gradient-light);
     z-index: -1;
+    animation: skillsrotate 2.5s linear infinite;
 }
+@keyframes skillsrotate{
+    to{
+        rotate: 360deg;
+    }
+}
+
 
 
 .skills__circle p {
@@ -649,18 +657,47 @@ body {
 }
 
 
+.central__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5em;
+}
 
-
-.skills__text {
-    font-size: 1.5em;
+.skills__text {       
+    font-size: 1.3em;
     line-height: 1.2;
     background: var(--gradient-light);
     background-clip: text;
     color: rgba(255, 255, 255, .2);
 }
+.write__text{
+    position: relative;
+    font-weight: 400;
+    color: var(--white);
+}
 
+.write__text::after {
+    position: absolute;
+    content: "|";
+    right: -5px;
+    color: var(--white);
+    animation: typing 1.2s linear infinite;
+}
 
+@keyframes typing {
+    0% {
+        color: var(--white);
+    }
 
+    50% {
+        color: transparent;
+    }
+
+    100% {
+        color: var(--white);
+    }
+}
 
 
 .contacts__title {
